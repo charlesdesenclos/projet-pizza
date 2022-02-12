@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Accueil</title>
+    <title>Chorriza Pizza</title>
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
@@ -33,7 +33,7 @@
         </ul>
     </nav>
     
-        <center><img src="images/chorriza_pizza.jpg" alt="bellacho_pizza" height="450px"></center>
+        <center><img src="images/chorriza_pizza.jpg" alt="chorriza_pizza" height="450px"></center>
     
 
     <div class="page">

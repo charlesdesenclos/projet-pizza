@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Bellacho Pizza</title>
+    <title>Gamberetti Pizza</title>
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
@@ -33,18 +33,18 @@
         </ul>
     </nav>
     
-        <center><img src="images/bellacho_pizza.jpg" alt="bellacho_pizza" height="450px"></center>
+        <center><img src="images/gamberetti_pizza.jpg" alt="gamberetti_pizza" height="450px"></center>
     
 
     <div class="page">
     <h1 role="heading" itemprop="name" class="espace"> 
-        Bellacho Pizza
+        Gamberetti Pizza
     </h1>
     <hr>
         <div >
             <h2 class="espace"> Les ingrédients :</h2>
 
-            Sauce tomate, mozarella, chrorizo, merguez, duo de poivrons.
+            Crème fraîche légère, mozzarella, gambas, oignons, courgettes marinées, tomates cerises marinées, persillade, quartiers de citron vert.
 
             <h2 class="espace"> Informations consommateurs </h2>
 

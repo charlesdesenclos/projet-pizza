@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Bellacho Pizza</title>
+    <title>Authentique Raclette Pizza</title>
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
@@ -33,18 +33,18 @@
         </ul>
     </nav>
     
-        <center><img src="images/bellacho_pizza.jpg" alt="bellacho_pizza" height="450px"></center>
+        <center><img src="images/raclette_pizza.jpg" alt="raclette_pizza" height="450px"></center>
     
 
     <div class="page">
     <h1 role="heading" itemprop="name" class="espace"> 
-        Bellacho Pizza
+        Authentique Raclette Pizza
     </h1>
     <hr>
         <div >
             <h2 class="espace"> Les ingrédients :</h2>
 
-            Sauce tomate, mozarella, chrorizo, merguez, duo de poivrons.
+            Crème fraîche légère, mozzarella, bacon, pommes de terre sautées, oignons, raclette.
 
             <h2 class="espace"> Informations consommateurs </h2>
 
