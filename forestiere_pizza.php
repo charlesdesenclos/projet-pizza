@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Cannibale Pizza</title>
+    <title>Forestière Pizza</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -34,18 +34,18 @@
         </ul>
     </nav>
     
-        <center><img src="images/cannibale_pizza.jpg" alt="cannibale_pizza" height="450px"></center>
+        <center><img src="images/forestiere_pizza.jpg" alt="forestiere_pizza" height="450px"></center>
     
 
     <div class="page">
     <h1 role="heading" itemprop="name" class="espace"> 
-        Cannibale Pizza
+        Forestière Pizza
     </h1>
     <hr>
         <div >
             <h2 class="espace"> Les ingrédients :</h2>
 
-            Sauce barbecue, mozzarella, poulet rôti, merguez, boulettes de bœuf assaisonnées.
+            Crème fraîche légère, mozzarella, lardons fumés, oignons, jambon, champignons de Paris, origan.
 
             <h2 class="espace"> Informations consommateurs </h2>
 

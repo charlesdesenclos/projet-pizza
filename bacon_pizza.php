@@ -34,7 +34,7 @@
         </ul>
     </nav>
     
-        <center><img src="images/bellacho_pizza.jpg" alt="bellacho_pizza" height="450px"></center>
+        <center><img src="images/bacon_pizza.jpg" alt="bacon_pizza" height="450px"></center>
     
 
     <div class="page">
