@@ -35,7 +35,19 @@
         </ul>
     </nav>
     
-    
+    <div class="">
+        
+            <h1>Bienvenue !</h1>
+        
+        <!-- permet de faire une box ou est écrit le texte-->
+        <div class="color">
+            <!-- mets de la couleur-->
+            <div class="hub">
+                <!-- place bien le texte-->
+                Bonjour chères clients, ici vous trouverez nos pizzas.
+            </div>
+        </div>
+    </div>
 
 </body>
 
