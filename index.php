@@ -23,7 +23,7 @@
                 <!-- mène à la page des pizza-->
             </li>
             <li>
-                <a class="nav-color" href="contact.html">A propos</a>
+                <a class="nav-color" href="contact.html">Commande</a>
                 <!-- mène à la page A propos-->
             </li>
             <li>
