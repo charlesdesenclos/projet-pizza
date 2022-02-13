@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Deluxe Pizza</title>
+    <title>4 Fromage Pizza</title>
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
@@ -33,18 +33,18 @@
         </ul>
     </nav>
     
-        <center><img src="images/deluxe_pizza.jpg" alt="deluxe_pizza" height="450px"></center>
+        <center><img src="images/fromage_pizza.jpg" alt="4fromage_pizza" height="450px"></center>
     
 
     <div class="page">
     <h1 role="heading" itemprop="name" class="espace"> 
-        Deluxe Pizza
+        4 Fromage Pizza
     </h1>
     <hr>
         <div >
             <h2 class="espace"> Les ingrédients :</h2>
 
-            Sauce tomate, mozzarella, boulettes de bœuf assaisonnées, champignons de Paris, oignons, duo de poivrons.
+            Sauce tomate, mozzarella, chèvre, emmental, Fourme d’Ambert AOP.
 
             <h2 class="espace"> Informations consommateurs </h2>
 
