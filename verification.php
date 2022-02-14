@@ -6,7 +6,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
     $db_username = 'desenclos';
     $db_password = 'sqK8ZUWxuvEpp!y';
     $db_name     = 'desenclos_pizza';
-    $db_host     = 'ftp-desenclos.alwaysdata.net';
+    $db_host     = 'desenclos.alwaysdata.net';
     $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
            or die('could not connect to database');
     
