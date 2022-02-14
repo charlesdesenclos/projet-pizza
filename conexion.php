@@ -34,7 +34,7 @@
             
         </ul>
     </nav>
-        <div id="contenair">
+        <div id="container">
             <!--conexion-->
                 <form action="verification.php" method="POST">
                     <h1>Conexion</h1>
