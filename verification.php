@@ -6,7 +6,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
     $db_username = 'desenclos';
     $db_password = 'sqK8ZUWxuvEpp!y';
     $db_name     = 'desenclos_pizza';
-    $db_host     = 'localhost';
+    $db_host     = 'ftp-desenclos.alwaysdata.net';
     $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
            or die('could not connect to database');
     
@@ -25,21 +25,21 @@ if(isset($_POST['username']) && isset($_POST['password']))
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
            $_SESSION['username'] = $username;
-           header('Location: principale.php');
+           header('Location: commande.php');
         }
         else
         {
-           header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
+           header('Location: conexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
         }
     }
     else
     {
-       header('Location: login.php?erreur=2'); // utilisateur ou mot de passe vide
+       header('Location: conexion.php?erreur=2'); // utilisateur ou mot de passe vide
     }
 }
 else
 {
-   header('Location: login.php');
+   header('Location: conexion.php');
 }
 mysqli_close($db); // fermer la connexion
 ?>
