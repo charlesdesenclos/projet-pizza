@@ -44,7 +44,7 @@
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
-                    <input type="submit" id="submit" value="LOGIN">
+                    <input type="submit" id="submit" value="Conexion">
                     <?php
                     if(isset($_GET['erreur'])){
                         $err = $_GET['erreur'];
