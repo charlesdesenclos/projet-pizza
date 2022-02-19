@@ -1,14 +1,16 @@
 <?php
 session_start();
+include('bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
+ 
+    // S'il y a une session alors on ne retourne plus sur cette page
+    if (isset($_SESSION['id'])){
+        header('Location: index.php');
+         exit;
+    }
 if(isset($_POST['username']) && isset($_POST['password']))
 {
     // connexion à la base de données
-    $db_username = 'desenclos';
-    $db_password = 'sqK8ZUWxuvEpp!y';
-    $db_name     = 'desenclos_pizza';
-    $db_host     = 'desenclos.alwaysdata.net';
-    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
-           or die('could not connect to database');
+    
     
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS

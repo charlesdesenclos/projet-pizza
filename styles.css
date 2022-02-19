@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+* {
+    font-family: 'Montserrat';
+}
+
+body {
+    margin: 0 auto;
+}
+
+/* Tête de page */
+
+header.header {
+    display: flex;
+    align-items: center;
+    background-color: black
+}
+
+header.header img{
+    width: 150px;
+}
+
+/* Les Backgrounds */
+
+section.top-page {
+    background: url('../images/Background1.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+section.cv {
+    background: url('../images/Background3.jpg');
+    background-size: cover;
+    height: 150em;
+}
+
+section.contact {
+    background: url('../images/Background3.jpg');
+    background-size: cover;
+    height: 10em;
+}
+
+section.pizza {
+    background: url('../images/Italies.jpg');
+    background-size: cover;
+    height: 43vh;
+}
+
+section.textem3c {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 25em;
+}
+
+section.textem3b {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 5em;
+}
+
+section.textem3e {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 13em;
+}
+
+section.textem4 {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 55em;
+}
+
+section.textemf1c {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 7em;
+}
+
+section.textemf1ct {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 7em;
+}
+
+section.textemf1cr {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 7em;
+}
+
+section.textemf1b {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 7em;
+}
+
+section.textem2kc {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 8em;
+}
+
+section.textem2k5 {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 8em;
+}
+
+section.textem2kd {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 19em;
+}
+
+section.textem2kn {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 50em;
+}
+
+section.textem2kb {
+    background: url('../images/FondNoir.png');
+    background-size: cover;
+    height: 5em;
+}
+
+mark {
+    background-color: black;
+    color: white;
+  }
+
+body {
+    color:black;
+    background-color:white;
+    background-image:url(../images/Background2.jpg);
+    margin:0;
+    }
+
+    body.contact {
+        color:black;
+        background-color:white;
+        background-image:url(../images/Background3.jpg);
+        margin:0;
+        }
+
+/* Page De bienvenue */
+
+.big-title {
+    color: white;
+    font-size: 80px;
+    padding: 20px 50px;
+}
+
+/* Menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 400px;
+    margin-left: 30px;
+}
+
+nav.nav li{
+    color: white;
+}

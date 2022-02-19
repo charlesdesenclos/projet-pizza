@@ -45,6 +45,8 @@
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
                     <input type="submit" id="submit" value="Conexion">
+
+                    <a href="inscription.php">Inscription</a>
                     <?php
                     if(isset($_GET['erreur'])){
                         $err = $_GET['erreur'];
