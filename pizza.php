@@ -16,7 +16,7 @@
             <img src="images/Logo.png" alt="Logo Pizzeria">
             <nav class="nav">
                 <a href="index.php"><li>Accueil</li></a>
-                <a href="pizza.php"><li>Pizza</li></a>
+                <a href="pizza.php"><li>Nos Pizza</li></a>
                 <a href="commander.php"><li>Commander</li></a>
                 <a href="connexion.php"><li>Se Connecter</li></a>
             </nav>
