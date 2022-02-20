@@ -56,7 +56,7 @@
         </div>
     </div>
     
-        <center><input class="button" type="button" value="Commander"></center>
+        <center><a href="commande.php"><input class="button" type="button" value="Commander"></a></center>
     
     
     </body >
