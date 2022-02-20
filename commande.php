@@ -26,7 +26,7 @@
                 <!-- mène à la page A propos-->
             </li>
             <li>
-                <a class="nav-color" href="conexion.php">Connexion</a>
+                <a class="nav-color" href="connexion.php">Connexion</a>
                 <!-- mène à la page de conexion-->
             </li>
             
@@ -50,6 +50,7 @@
                         <option value="forestiere_pizza">Forestière Pizza</option>
                         <option value="fromage_pizza">Fromage Pizza</option>
                         <option value="gamberetti_pizza">Gamberetti Pizza</option>
+                        <option value="raclette_pizza">Raclette Pizza</option>
                     </select>
 
                     <label><b>Saisissez votre adresse :</b></label>

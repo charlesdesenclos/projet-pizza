@@ -26,8 +26,8 @@
                 <!-- mène à la page A propos-->
             </li>
             <li>
-                <a class="nav-color" href="conexion.php">Conexion</a>
-                <!-- mène à la page de conexion-->
+                <a class="nav-color" href="connexion.php">Conexion</a>
+                <!-- mène à la page de connexion-->
             </li>
             
             
