@@ -13,26 +13,19 @@
     <body>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
-        <ul>
-            <li><a class="nav-color" href="index.php">Accueil</a>
-                <!-- mène à l'accueil / la class nav-color permet de mettre le texte en blanc-->
-            </li>
-            <li>
-                <a class="nav-color" href="pizza.php">Pizza</a>
+        <header class="header">
+            <img src="/images/Logo.png" alt="Logo Pizzeria">
+            <nav class="nav">
+                <a href="index.php"><li>Accueil</li></a>
+                <!-- mène à l'accueil -->
+                <a href="pizza.php"><li> Nos Pizza</li></a>
                 <!-- mène à la page des pizza-->
-            </li>
-            <li>
-                <a class="nav-color" href="contact.html">Commande</a>
-                <!-- mène à la page A propos-->
-            </li>
-            <li>
-                <a class="nav-color" href="connexion.php">Conexion</a>
+                <a href="commande.php"><li>Commander</li></a>
+                <!-- mène à la page commande-->
+                <a href="connexion.php"><li>Se Connecter</li></a>
                 <!-- mène à la page de conexion-->
-            </li>
-            
-            
-            
-        </ul>
+            </nav>
+        </header>
     </nav>
     
         <center><img src="images/cannibale_pizza.jpg" alt="cannibale_pizza" height="450px"></center>
