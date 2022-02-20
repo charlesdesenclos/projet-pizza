@@ -55,6 +55,9 @@
                     <label><b>Saisissez votre adresse :</b></label>
                     <input type="adresse" placeholder="Entrez une adresse valide" name="adresse" required>
 
+                    <label><b>Saisissez vos coordonnée bancaire :</b></label>
+                    <input type="bancaire" placeholder="Entrez des coordonnée bancaire valide" name="bancaire" required>
+
                     <input type="submit" id="submit" value="Commander">
 
                     
