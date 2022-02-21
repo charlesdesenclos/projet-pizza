@@ -17,8 +17,8 @@
             <nav class="nav">
                 <a href="index.php"><li>Accueil</li></a>
                 <!-- mène à l'accueil -->
-                <a href="pizza.php"><li> Nos Pizza</li></a>
-                <!-- mène à la page des pizza-->
+                <a href="pizza.php"><li> Nos Pizzas</li></a>
+                <!-- mène à la page des pizzas-->
                 <a href="commande.php"><li>Commander</li></a>
                 <!-- mène à la page commande-->
                 <a href="connexion.php"><li>Se Connecter</li></a>
