@@ -1,8 +1,8 @@
 <?php
     class conexionBD{
-        private $host = 'localhost';
-        private $name ='desenclos';
-        private $user ='desenclos_pizza';
+        private $host = 'mysql-desenclos.alwaysdata.net';
+        private $name ='desenclos_pizza';
+        private $user ='desenclos';
         private $pass = 'sqK8ZUWxuvEpp!y';
         private $connexion;
         $db_username = 'desenclos';
