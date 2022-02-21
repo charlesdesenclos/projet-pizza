@@ -37,7 +37,7 @@
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
-                    <input type="submit" id="submit" value="Conexion">
+                    <a href="index.php"><input type="submit" id="submit" value="Conexion"></a>
 
                     <a href="inscription.php">Vous n'avez pas de compte ? Inscrivez vous en cliquant ICI !</a>
                     <?php
