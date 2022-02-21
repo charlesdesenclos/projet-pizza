@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
+    include('connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
  
     // S'il y a une session alors on ne retourne plus sur cette page
     if (isset($_SESSION['id'])){

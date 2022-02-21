@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BDD
+include('connexionDB.php'); // Fichier PHP contenant la connexion de la BDD
  
     // S'il y a une session alors on ne retourne plus sur cette page
     if (isset($_SESSION['id'])){
@@ -9,7 +9,7 @@ include('bd/connexionDB.php'); // Fichier PHP contenant la connexion à votre BD
     }
 if(isset($_POST['username']) && isset($_POST['password']))
 {
-    // connexion à la base de données
+   
     
     
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
