@@ -5,7 +5,7 @@
         private $user ='desenclos';
         private $pass = 'sqK8ZUWxuvEpp!y';
         private $connexion;
-        $db_username = 'desenclos';
+        
     
 
         function__construct($host = null, $name = null, $user = null, $pass = null){
