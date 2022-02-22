@@ -28,17 +28,75 @@
         </header>
     </nav>
     <div id="container">
+    <?php 
+                if(isset($_GET['reg_err']))
+                {
+                    $err = htmlspecialchars($_GET['reg_err']);
+
+                    switch($err)
+                    {
+                        case 'success':
+                        ?>
+                            <div class="alert alert-success">
+                                <strong>Succès</strong> inscription réussie !
+                            </div>
+                        <?php
+                        break;
+
+                        case 'password':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> mot de passe différent
+                            </div>
+                        <?php
+                        break;
+
+                        case 'email':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> email non valide
+                            </div>
+                        <?php
+                        break;
+
+                        case 'email_length':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> email trop long
+                            </div>
+                        <?php 
+                        break;
+
+                        case 'pseudo_length':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> pseudo trop long
+                            </div>
+                        <?php 
+                        case 'already':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> compte deja existant
+                            </div>
+                        <?php 
+
+                    }
+                }
+                ?>
             <!--conexion-->
                 <form action="verification_inscription.php" method="POST">
                     <h1>Inscription</h1>
                     <label><b>Nom d'utilisateur</b></label> 
-                    <input type="text" placeholder="Entrez un nom d'utilisateur" name="username" required>
+                    <input type="text" placeholder="Entrez un nom d'utilisateur" name="pseudo" required>
+
+                    <label><b>Email :</b></label>
+                    <input type="text" placeholder="Entrez votre email" name="email"required>
 
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
-                    <a href="connexion.php"><input type="submit" id="submit" value="Inscription"></a>
-
+                    <input type="submit" id="submit" value="Enregistrer les données">
+                    
                     <?php
                     if(isset($_GET['erreur'])){
                         $err = $_GET['erreur'];

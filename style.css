@@ -238,3 +238,8 @@ nav.nav li {
 .background_color {
     background-color: rgba(0, 174, 255, 0.986);
 }
+input[type=button]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}

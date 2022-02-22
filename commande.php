@@ -46,7 +46,7 @@
                     <label><b>Saisissez vos coordonnée bancaire :</b></label>
                     <input type="bancaire" placeholder="Entrez des coordonnée bancaire valide" name="bancaire" required>
 
-                    <a href="commande_rep.php"><input type="submit" id="submit" value="Commander"></a>
+                    <a href="commande_rep.php"><input type="button" id="button" value="Commander"></a>
 
                     
                     
