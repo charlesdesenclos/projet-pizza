@@ -238,6 +238,16 @@ nav.nav li {
 .background_color {
     background-color: rgba(0, 174, 255, 0.986);
 }
+input[type=button] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
 input[type=button]:hover {
     background-color: white;
     color: #53af57;

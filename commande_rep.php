@@ -33,7 +33,7 @@
                     <h1>Commande</h1>
                     <label><b>Votre pizza a bien été commander</b></label> 
                     <?php
-                        $prix=rand(9, 15);
+                        $prix=rand(10, 10);
                          echo ( "Le prix est de $prix euros." );
                         
                     ?>

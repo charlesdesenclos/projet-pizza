@@ -34,10 +34,10 @@
                     <label><b>Pizza :</b></label> 
                     <select name="pizza" id="select-pizza">
                         <option value="">Choisisez votre pizza</option>
-                        <option value="bacon_pizza">Bacon Pizza</option>
-                        <option value="bellacho_pizza">Bellacho Pizza</option>
-                        <option value="chorriza_pizza">Chorriza Pizza</option>
-                        <option value="diavola_pizza">Diavola Pizza</option>
+                        <option value="bacon_pizza">Bacon Pizza  10€</option>
+                        <option value="bellacho_pizza">Bellacho Pizza 10€</option>
+                        <option value="chorriza_pizza">Chorriza Pizza 10€</option>
+                        <option value="diavola_pizza">Diavola Pizza 10€</option>
                     </select>
 
                     <label><b>Saisissez votre adresse :</b></label>
