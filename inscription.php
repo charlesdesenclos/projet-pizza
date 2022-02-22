@@ -32,8 +32,8 @@
                 if(isset($_GET['reg_err']))
                 {
                     $err = htmlspecialchars($_GET['reg_err']);
-
-                    switch($err)
+                    //vérifie si toutes les champs sont valides
+                    switch($err) 
                     {
                         case 'success':
                         ?>
