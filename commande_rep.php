@@ -33,14 +33,14 @@
                     <h1>Commande</h1>
                     <label><b>Votre pizza a bien été commander</b></label> 
                     <?php
-                        $prix=rand(1, 10);
+                        $prix=rand(9, 15);
                          echo ( "Le prix est de $prix euros." );
                         
                     ?>
                     <label><b>Votre pizza arrivera dans :</b></label>
                     <?php
-                        $temps=rand(1, 2);
-                         echo ("Le temps estimé pour la livraison est de $temps heures.");
+                        $temps=rand(10, 15);
+                         echo ("Le temps estimé pour la livraison est de $temps minutes.");
                         
                     ?>
                 </form>
