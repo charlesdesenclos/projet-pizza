@@ -10,7 +10,7 @@
 
     </head>
 
-    <body>
+    <body class="background_color">
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
         <header class="header">
@@ -28,22 +28,18 @@
         </header>
     </nav>
     
-        <center><img src="images/chorriza_pizza.jpg" alt="chorriza_pizza" height="450px"></center>
+        <center><img src="images/chorriza_pizza.png" alt="chorriza_pizza" height="450px"></center>
     
 
     <div class="page">
-    <h1 role="heading" itemprop="name" class="espace"> 
+    <h1 role="heading" itemprop="name" class="espace"><mark> 
         Chorriza Pizza
-    </h1>
+    </mark></h1>
     <hr>
         <div >
-            <h2 class="espace"> Les ingrédients :</h2>
+            <h2 class="espace"><mark>Les ingrédients : Sauce tomate, mozarella, chrorizo, chèvre, olives Kalamato.</mark></h2>
 
-            Sauce tomate, mozarella, chrorizo, chèvre, olives Kalamato.
-
-            <h2 class="espace"> Informations consommateurs </h2>
-
-            Tous nos produits sont bio ainsi que produits en France.
+            <h2 class="espace"><mark>Informations consommateurs : Tous nos produits sont bio ainsi que produits en France.</mark></h2>
 
             
         </div>

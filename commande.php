@@ -29,21 +29,15 @@
     </nav>
         <div id="container">
             <!--conexion-->
-                <form action="verification.php" method="POST">
+                <form >
                     <h1>Commande</h1>
                     <label><b>Pizza :</b></label> 
                     <select name="pizza" id="select-pizza">
-                        <option value=""> Choisisez votre pizza</option>
+                        <option value="">Choisisez votre pizza</option>
                         <option value="bacon_pizza">Bacon Pizza</option>
                         <option value="bellacho_pizza">Bellacho Pizza</option>
                         <option value="chorriza_pizza">Chorriza Pizza</option>
-                        <option value="cannibale_pizza">Cannibale Pizza</option>
-                        <option value="deluxe_pizza">Deluxe Pizza</option>
                         <option value="diavola_pizza">Diavola Pizza</option>
-                        <option value="forestiere_pizza">Forestière Pizza</option>
-                        <option value="fromage_pizza">Fromage Pizza</option>
-                        <option value="gamberetti_pizza">Gamberetti Pizza</option>
-                        <option value="raclette_pizza">Raclette Pizza</option>
                     </select>
 
                     <label><b>Saisissez votre adresse :</b></label>
@@ -52,17 +46,10 @@
                     <label><b>Saisissez vos coordonnée bancaire :</b></label>
                     <input type="bancaire" placeholder="Entrez des coordonnée bancaire valide" name="bancaire" required>
 
-                    <input type="submit" id="submit" value="Commander">
+                    <a href="commande_rep.php"><input type="submit" id="submit" value="Commander"></a>
 
                     
-                    <?php
-                    if(isset($_GET['erreur'])){
-                        $err = $_GET['erreur'];
-                        if($err==1 || $err==2) {
-                            echo "<p style = 'color:red'>Utilisateur ou mot de passe incorrect</p>";
-                        }
-                    }
-                    ?>
+                    
                 </form>
             
         </div>

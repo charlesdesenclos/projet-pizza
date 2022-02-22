@@ -28,6 +28,7 @@
             <div class="landing-page">
         <div align="center">
             <h1 class="big-title"><mark>Bienvenue sur notre site de commande en ligne !</mark></h1>
+            <img src="../images/Chef.png"/></a>
             <a href="../pizza.php"><img src="../images/PassezCommande.png"/></a>
         </div>
 

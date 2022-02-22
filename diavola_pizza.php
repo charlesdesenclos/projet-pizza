@@ -10,7 +10,7 @@
 
     </head>
 
-    <body>
+    <body class="background_color">
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
         <header class="header">
@@ -28,22 +28,18 @@
         </header>
     </nav>
     
-        <center><img src="images/diavola_pizza.jpg" alt="diavola_pizza" height="450px"></center>
+        <center><img src="images/diavola_pizza.png" alt="diavola_pizza" height="450px"></center>
     
 
     <div class="page">
-    <h1 role="heading" itemprop="name" class="espace"> 
+    <h1 role="heading" itemprop="name" class="espace"><mark> 
         Diavola Pepperoni Pizza
-    </h1>
+        </mark></h1>
     <hr>
         <div >
-            <h2 class="espace"> Les ingrédients :</h2>
+            <h2 class="espace"><mark>Les ingrédients : Sauce tomate bio, mozzarella, pepperoni, duo de poivrons, oignons, piments jalapeños.</mark></h2>
 
-            Sauce tomate bio, mozzarella, pepperoni, duo de poivrons, oignons, piments jalapeños.
-
-            <h2 class="espace"> Informations consommateurs </h2>
-
-            Tous nos produits sont bio ainsi que produits en France.
+            <h2 class="espace"><mark>Informations consommateurs : Tous nos produits sont bio ainsi que produits en France.</mark></h2>
 
             
         </div>

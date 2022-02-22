@@ -10,7 +10,7 @@
 
     </head>
 
-    <body>
+    <body class="background_color">
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
         <header class="header">
@@ -28,22 +28,18 @@
         </header>
     </nav>
     
-        <center><img src="images/bacon_pizza.jpg" alt="bacon_pizza" height="450px"></center>
+        <center><img src="images/bacon_pizza.png" alt="bacon_pizza" height="450px"></center>
     
 
     <div class="page">
-    <h1 role="heading" itemprop="name" class="espace"> 
+    <h1 role="heading" itemprop="name" class="espace"><mark> 
         Bacon Groovy Pizza
-    </h1>
+        </mark></h1>
     <hr>
         <div >
-            <h2 class="espace"> Les ingrédients :</h2>
+            <h2 class="espace"><mark>Les ingrédients : Crème fraîche légère, mozzarella, poulet rôti, oignons, bacon, sauce barbecue.</mark></h2>
 
-            Crème fraîche légère, mozzarella, poulet rôti, oignons, bacon, sauce barbecue.
-
-            <h2 class="espace"> Informations consommateurs </h2>
-
-            Tous nos produits sont bio ainsi que produits en France.
+            <h2 class="espace"><mark>Informations consommateurs : Tous nos produits sont bio ainsi que produits en France.</mark></h2>
 
             
         </div>
