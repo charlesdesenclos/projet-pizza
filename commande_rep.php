@@ -28,7 +28,7 @@
         </header>
     </nav>
         <div id="container">
-            <!--conexion-->
+            <!--commande résultat-->
                 <form action="verification.php" method="POST">
                     <h1>Commande</h1>
                     <label><b>Votre pizza a bien été commander</b></label> 
@@ -43,6 +43,7 @@
                          echo ("Le temps estimé pour la livraison est de $temps minutes.");
                         
                     ?>
+                    <a href="index.php"><input type="button" id="button" value="Retour au menu"></a>
                 </form>
             
         </div>
