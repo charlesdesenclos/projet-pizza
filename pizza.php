@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
     <title>Pizza</title>
     <link rel="icon" type="image/png" sizes="16x16" href="images/icone_pizza.png">
