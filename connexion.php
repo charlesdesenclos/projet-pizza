@@ -28,7 +28,7 @@
         </header>
     </nav>
         <div id="container">
-            <!--conexion-->
+            <!--connexion-->
             <?php 
                 if(isset($_GET['login_err']))
                 {
