@@ -29,7 +29,7 @@
     </nav>
         <div id="container">
             <!--commande résultat-->
-                <form action="verification.php" method="POST">
+                <form action="deconnexion.php" method="POST">
                     <h1>Commande</h1>
                     <label><b>Votre pizza a bien été commander</b></label> 
                     <?php
@@ -44,6 +44,7 @@
                         
                     ?>
                     <a href="index.php"><input type="button" id="button" value="Retour au menu"></a>
+                    <a href="index.php"><input type="submit" id="submit" value="Déconexion"></a>
                 </form>
             
         </div>
