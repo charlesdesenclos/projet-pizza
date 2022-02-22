@@ -84,7 +84,7 @@
                 }
                 ?>
             <!--conexion-->
-                <form action="verification_inscription.php" method="POST">
+                <form action="verfication_inscription.php" method="POST">
                     <h1>Inscription</h1>
                     <label><b>Nom d'utilisateur</b></label> 
                     <input type="text" placeholder="Entrez un nom d'utilisateur" name="pseudo" required>
