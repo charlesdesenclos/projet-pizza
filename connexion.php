@@ -62,7 +62,7 @@
                     }
                 }
                 ?>
-                <form action="verification.php" method="POST">
+                <form action="verification.php" method="POST"> 
                     <h1>Connexion</h1>
                     <label><b>Email :</b></label> 
                     <input type="text" placeholder="Entrez votre email" name="email" required>
