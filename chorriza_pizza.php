@@ -10,7 +10,7 @@
 
     </head>
 
-    <body class="background_color">
+    <body>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
         <header class="header">

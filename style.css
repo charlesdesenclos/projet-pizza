@@ -234,10 +234,6 @@ nav.nav {
 nav.nav li {
     color: white;
 }
-
-.background_color {
-    background-color: rgba(0, 174, 255, 0.986);
-}
 input[type=button] {
     background-color: #53af57;
     color: white;
