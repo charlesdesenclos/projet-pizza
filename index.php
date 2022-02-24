@@ -23,6 +23,8 @@
                 <!-- mène à la page commande-->
                 <a href="connexion.php"><li>Se Connecter</li></a>
                 <!-- mène à la page de conexion-->
+                <a href="deconnexion.php"><li>Deconnexion</li></a>
+                <!-- deconnecte l'utilisateur-->
             </nav>
         </header>
             <div class="landing-page">
