@@ -15,7 +15,7 @@
         if(strlen($adresse) <= 100){ // On verifie que la longueur de adresse <= 100
             if(strlen($bancaire) <= 100){ // On verifie que la longueur de l'bancaire <= 100
                 if(strlen($id_pizza) <= 11){ // On verifie que la longueur de id_pizza <= 11
-                    $insert = $bdd->prepare('INSERT INTO test(adresse, bancaire, id_pizza) VALUES(:adresse, :bancaire, :id_pizza)');
+                    $insert = $bdd->prepare('INSERT INTO panier(adresse, bancaire, id_pizza) VALUES(:adresse, :bancaire, :id_pizza)');
                     $insert->execute(array(
                         'adresse' => $adresse,
                         'bancaire' => $bancaire,
