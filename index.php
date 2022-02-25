@@ -34,20 +34,12 @@
                 <li>Vous êtes connecter en tant que : <?php echo $data['pseudo']; ?></li>
                 <!-- affiche l'utilisateur si il est connecter-->
                 <?php 
-                    if($data['pseudo'])
-                    {?>
+                    if($data['pseudo']) //affiche déconnexion et la liste des commandes quand l'utilisateur est connecté
+                     {?>
                         <li><a href="deconnexion.php">Déconexion</a></li>
                         <li><a href="liste_commande.php">Liste des commandes</a></li><?php
                     }
-                ?>    
-                
-                
-                <div>
-                    
-                
-                
-                
-                
+                ?>      
             </nav>
         </header>
             <div class="landing-page">
