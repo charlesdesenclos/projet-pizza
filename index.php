@@ -31,11 +31,17 @@
                 <!-- mène à la page commande-->
                 <a href="connexion.php"><li>Se Connecter</li></a>
                 <!-- mène à la page de conexion-->
-                <div class="deroulant"><a href="">Vous êtes connecter en tant que :<?php echo $data['pseudo']; ?>&ensp;</a>
-                    <ul class="sous"></ul>
-                    <li><a href="deconnexion.php">Déconexion</a></li>
-                    <li><a href="liste_commande.php">Liste des commandes</a></li>
+                <li>Vous êtes connecter en tant que :<?php echo $data['pseudo']; ?></li>
                 <!-- affiche l'utilisateur si il est connecter-->
+                <?php 
+                    if($data['pseudo'])
+                    {?>
+                        <li><a href="deconnexion.php">Déconexion</a></li>
+                        <li><a href="liste_commande.php">Liste des commandes</a></li><?php
+                    }
+                ?>    
+                
+                
                 <div>
                     
                 
