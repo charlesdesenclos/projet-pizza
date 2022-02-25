@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -95,16 +99,12 @@
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
-                    <input type="submit" id="submit" value="Enregistrer les données">
+                    <label><b>Retappez le mot de passe</b></label>
+                    <input type="password" placeholder="Entrez un mot de passe" name="password_retype" required>
+
+                    <input type="submit" id="submit" value="Inscription">
                     
-                    <?php
-                    if(isset($_GET['erreur'])){
-                        $err = $_GET['erreur'];
-                        if($err==1 || $err==2) {
-                            echo "<p style = 'color:red'>Utilisateur ou mot de passe incorrect</p>";
-                        }
-                    }
-                    ?>
+                    
                 </form>
             
         </div>

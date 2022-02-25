@@ -16,7 +16,7 @@
         $data = $check->fetch();
         $row = $check->rowCount();
 
-        $email = strtolower($email); // on transforme toute les lettres majuscule en minuscule pour éviter deux compte différents.
+        $email = strtolower($email); // on transforme toute les lettres majuscule en minuscule pour avoir deux compte différents 
         
         // Si la requete renvoie un 0 alors l'utilisateur n'existe pas 
         if($row == 0){ 
@@ -42,12 +42,11 @@
                                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
                             // On redirige avec le message de succès
-                            header('Location:index.php?reg_err=success');
+                            header('Location:inscription.php?reg_err=success');
                             die();
-                        }else{ header('Location: index.php?reg_err=password'); die();}
-                    }else{ header('Location: index.php?reg_err=email'); die();}
-                }else{ header('Location: index.php?reg_err=email_length'); die();}
-            }else{ header('Location: index.php?reg_err=pseudo_length'); die();}
-        }else{ header('Location: index.php?reg_err=already'); die();}
+                        }else{ header('Location: inscription.php?reg_err=password'); die();}
+                    }else{ header('Location: inscription.php?reg_err=email'); die();}
+                }else{ header('Location: inscription.php?reg_err=email_length'); die();}
+            }else{ header('Location: inscription.php?reg_err=pseudo_length'); die();}
+        }else{ header('Location: inscription.php?reg_err=already'); die();}
     }
-?>
