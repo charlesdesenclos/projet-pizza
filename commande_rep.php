@@ -10,7 +10,11 @@
 
     </head>
 
-    <body>
+<body>
+    <?php
+        session_start();
+        require_once 'config.php'; // ajout connexion bdd 
+    ?>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
         <header class="header">
@@ -49,5 +53,5 @@
             
         </div>
 
-    </body>
+</body>
 </html>

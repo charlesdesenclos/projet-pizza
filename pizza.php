@@ -10,7 +10,11 @@
 
     </head>
 
-    <body>
+<body>
+    <?php
+        session_start();
+        require_once 'config.php'; // ajout connexion bdd 
+    ?>
     <section class="pizza">
         <header class="header">
             <img src="/images/Logo.png" alt="Logo Pizzeria">
