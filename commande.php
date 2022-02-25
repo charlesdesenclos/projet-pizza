@@ -29,15 +29,15 @@
     </nav>
         <div id="container">
             <!--conexion-->
-                <form >
+                <form action="verification_commande.php" method="POST" >
                     <h1>Commande</h1>
                     <label><b>Pizza :</b></label> 
-                    <select name="pizza" id="select-pizza">
+                    <select name="id_pizza" id="select-pizza">
                         <option value="">Choisisez votre pizza</option>
-                        <option value="bacon_pizza">Bacon Pizza  10€</option>
-                        <option value="bellacho_pizza">Bellacho Pizza 10€</option>
-                        <option value="chorriza_pizza">Chorriza Pizza 10€</option>
-                        <option value="diavola_pizza">Diavola Pizza 10€</option>
+                        <option value="1">Bacon Pizza  10€</option>
+                        <option value="2">Bellacho Pizza 10€</option>
+                        <option value="3">Chorriza Pizza 10€</option>
+                        <option value="4">Diavola Pizza 10€</option>
                     </select>
 
                     <label><b>Saisissez votre adresse :</b></label>
@@ -46,7 +46,7 @@
                     <label><b>Saisissez vos coordonnée bancaire :</b></label>
                     <input type="bancaire" placeholder="Entrez des coordonnée bancaire valide" name="bancaire" required>
 
-                    <a href="commande_rep.php"><input type="button" id="button" value="Commander"></a>
+                    <input type="submit" id="submit" value="Commander">
 
                     
                     
