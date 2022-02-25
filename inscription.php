@@ -103,6 +103,8 @@
                     <input type="password" placeholder="Entrez un mot de passe" name="password_retype" required>
 
                     <input type="submit" id="submit" value="Inscription">
+
+                    <a href="connexion.php">Vous avez un compte ? Connectez vous en cliquant ICI !</a>
                     
                     
                 </form>

@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <?php
+        session_start();
+        require_once 'config.php'; // ajout connexion bdd 
+
+        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+        $req->execute(array($_SESSION['user']));
+        $data = $req->fetch();
+        ?>
         <header class="header">
             <img src="/images/Logo.png" alt="Logo Pizzeria">
             <nav class="nav">
@@ -23,8 +31,17 @@
                 <!-- mène à la page commande-->
                 <a href="connexion.php"><li>Se Connecter</li></a>
                 <!-- mène à la page de conexion-->
-                <a href="deconnexion.php"><li>Deconnexion</li></a>
-                <!-- deconnecte l'utilisateur-->
+                <div class="deroulant"><a href="">Vous êtes connecter en tant que :<?php echo $data['pseudo']; ?>&ensp;</a>
+                    <ul class="sous"></ul>
+                    <li><a href="deconnexion.php">Déconexion</a></li>
+                    <li><a href="liste_commande.php">Liste des commandes</a></li>
+                <!-- affiche l'utilisateur si il est connecter-->
+                <div>
+                    
+                
+                
+                
+                
             </nav>
         </header>
             <div class="landing-page">

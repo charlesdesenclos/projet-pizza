@@ -11,19 +11,5 @@
     }
        
 
-    //  GESTION DES SESSIONS
-        if(!is_null($mabase)){
-            if (isset($_SESSION["Connected"]) && $_SESSION["Connected"]===true){
-                $access = true;
-                if(isset($_SESSION["idUser"])){
-                    $utilisateur1->setUserById($_SESSION["idUser"]);
-                }
-            }else{
-                $access = false;
-            // Affichage de formulaire si pas deconnexion
-                $access = $utilisateur1->ConnectToi();
-            }
-        }else{
-            $errorMessage.= "Le site n'a pas accès à la BDD.";
-        }
+    
     ?>

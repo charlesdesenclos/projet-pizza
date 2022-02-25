@@ -50,3 +50,4 @@
             }else{ header('Location: inscription.php?reg_err=pseudo_length'); die();}
         }else{ header('Location: inscription.php?reg_err=already'); die();}
     }
+?>
