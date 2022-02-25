@@ -1,9 +1,7 @@
 <?php 
     session_start();
     require_once 'config.php'; // On inclue la connexion à la bdd
-    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
-    $req->execute(array($_SESSION['user']));
-    $data = $req->fetch();
+    
 
     // Si les variables existent et qu'elles ne sont pas vides
     if(isset($_POST['id_pizza']) && !empty($_POST['adresse']) && !empty($_POST['bancaire']))
@@ -14,10 +12,10 @@
 
         
 
-        if(strlen($adresse) <= 100){ // On verifie que la longueur de pizza <= 100
-            if(strlen($bancaire) <= 100){ // On verifie que la longueur de l'addresse <= 100
-                if(strlen($id_pizza) <= 100){ // On verifie que la longueur de bancaire <= 100
-                    $insert = $bdd->prepare('INSERT INTO Commande(adresse, bancaire, id_pizza) VALUES(:adresse, :bancaire, :id_pizza)');
+        if(strlen($adresse) <= 100){ // On verifie que la longueur de adresse <= 100
+            if(strlen($bancaire) <= 100){ // On verifie que la longueur de l'bancaire <= 100
+                if(strlen($id_pizza) <= 11){ // On verifie que la longueur de id_pizza <= 11
+                    $insert = $bdd->prepare('INSERT INTO test(adresse, bancaire, id_pizza) VALUES(:adresse, :bancaire, :id_pizza)');
                     $insert->execute(array(
                         'adresse' => $adresse,
                         'bancaire' => $bancaire,
