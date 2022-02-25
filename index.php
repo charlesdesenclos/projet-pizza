@@ -31,7 +31,7 @@
                 <!-- mène à la page commande-->
                 <a href="connexion.php"><li>Se Connecter</li></a>
                 <!-- mène à la page de conexion-->
-                <li>Vous êtes connecter en tant que :<?php echo $data['pseudo']; ?></li>
+                <li>Vous êtes connecter en tant que : <?php echo $data['pseudo']; ?></li>
                 <!-- affiche l'utilisateur si il est connecter-->
                 <?php 
                     if($data['pseudo'])
