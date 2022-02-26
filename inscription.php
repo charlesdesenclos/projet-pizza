@@ -103,7 +103,7 @@
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
-                    <label><b>Retappez le mot de passe</b></label>
+                    <label><b>Confirmez le mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password_retype" required>
 
                     <input type="submit" id="submit" value="Inscription">

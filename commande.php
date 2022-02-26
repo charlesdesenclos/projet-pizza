@@ -17,6 +17,7 @@
         $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
         $req->execute(array($_SESSION['user']));
         $data = $req->fetch();
+        
     ?>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
@@ -34,11 +35,12 @@
             </nav>
         </header>
     </nav>
-    <?php echo $data['pseudo']; ?>
+    
         <div id="container">
             <!--conexion-->
                 <form action="verification_commande.php" method="POST" >
                     <h1>Commande</h1>
+                    
                     <label><b>Pizza :</b></label> 
                     <select name="id_pizza" id="select-pizza">
                         <option value="">Choisisez votre pizza</option>
@@ -53,6 +55,9 @@
 
                     <label><b>Saisissez vos coordonnée bancaire :</b></label>
                     <input type="bancaire" placeholder="Entrez des coordonnée bancaire valide" name="bancaire" required>
+
+                    
+                    
 
                     <input type="submit" id="submit" value="Commander">
 
