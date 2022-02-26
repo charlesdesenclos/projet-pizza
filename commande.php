@@ -50,11 +50,7 @@
                         <option value="4">Diavola Pizza 10€</option>
                     </select>
 
-                    <label><b>Saisissez votre adresse :</b></label>
-                    <input type="adresse" placeholder="Entrez une adresse valide" name="adresse" required>
-
-                    <label><b>Saisissez vos coordonnée bancaire :</b></label>
-                    <input type="bancaire" placeholder="Entrez des coordonnée bancaire valide" name="bancaire" required>
+                    
 
                     
                     
