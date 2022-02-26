@@ -18,6 +18,10 @@
     <?php
         session_start();
         require_once 'config.php'; // ajout connexion bdd 
+
+        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+        $req->execute(array($_SESSION['user']));
+        $data = $req->fetch();
     ?>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
@@ -94,5 +98,20 @@
             
         </div>
 
+
+    <footer class="footer">
+        <img src="/images/Logo.png" alt="Logo Pizzeria">
+        <nav class="nav">
+            <li>Vous êtes connecter en tant que : <?php echo $data['pseudo']; ?></li>
+            <!-- affiche l'utilisateur si il est connecter-->
+            <?php 
+                if($data['pseudo']) //affiche déconnexion et la liste des commandes quand l'utilisateur est connecté
+                    {?>
+                    <li><a href="deconnexion.php">Déconexion</a></li>
+                    <li><a href="liste_commande.php">Liste des commandes</a></li><?php
+                }
+            ?>  
+        </nav>
+    </footer>
 </body>
 </html>

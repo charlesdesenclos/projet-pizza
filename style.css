@@ -265,3 +265,13 @@ input[type=button]:hover {
     border: 1px solid transparent;
     border-radius: 0.25rem;
 }
+
+footer.footer {
+    display: flex;
+    align-items: center;
+    background-color: black
+}
+
+footer.footer img {
+    width: 150px;
+}

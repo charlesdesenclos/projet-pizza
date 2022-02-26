@@ -27,12 +27,12 @@
                 // Si le mot de passe est le bon
                 if(password_verify($password, $data['password']))
                 {
-                    // On créer la session et on redirige sur index.php
+                    // On créer la session et on redirige sur commande.php
                     $_SESSION['user'] = $data['token'];
-                    header('Location: index.php');
+                    header('Location: commande.php');
                     die();
-                }else{ header('Location: connexion.php?login_err=password'); die(); }
-            }else{ header('Location: connexion.php?login_err=email'); die(); }
-        }else{ header('Location: connexion.php?login_err=already'); die(); }
-    }else{ header('Location: connexion.php'); die();} // si le formulaire est envoyé sans aucune données
+                }else{ header('Location: connexion2.php?login_err=password'); die(); }
+            }else{ header('Location: connexion2.php?login_err=email'); die(); }
+        }else{ header('Location: connexion2.php?login_err=already'); die(); }
+    }else{ header('Location: connexion2.php'); die();} // si le formulaire est envoyé sans aucune données
 ?>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-    <title>Inscription</title>
+    <title>Connexion</title>
     <link rel="icon" type="image/png" sizes="16x16" href="images/icone_pizza.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
@@ -39,26 +39,19 @@
             </nav>
         </header>
     </nav>
-    <div id="container">
-    <?php 
-                if(isset($_GET['reg_err']))
+        <div id="container">
+            <!--connexion-->
+            <?php 
+                if(isset($_GET['login_err']))
                 {
-                    $err = htmlspecialchars($_GET['reg_err']);
-                    //vérifie si toutes les champs sont valides
-                    switch($err) 
-                    {
-                        case 'success':
-                        ?>
-                            <div class="alert alert-success">
-                                <strong>Succès</strong> inscription réussie !
-                            </div>
-                        <?php
-                        break;
+                    $err = htmlspecialchars($_GET['login_err']);
 
+                    switch($err)
+                    {
                         case 'password':
                         ?>
                             <div class="alert alert-danger">
-                                <strong>Erreur</strong> mot de passe différent
+                                <strong>Erreur</strong> mot de passe incorrect
                             </div>
                         <?php
                         break;
@@ -66,61 +59,41 @@
                         case 'email':
                         ?>
                             <div class="alert alert-danger">
-                                <strong>Erreur</strong> email non valide
+                                <strong>Erreur</strong> email incorrect
                             </div>
                         <?php
                         break;
 
-                        case 'email_length':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> email trop long
-                            </div>
-                        <?php 
-                        break;
-
-                        case 'pseudo_length':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> pseudo trop long
-                            </div>
-                        <?php 
                         case 'already':
                         ?>
                             <div class="alert alert-danger">
-                                <strong>Erreur</strong> compte deja existant
+                                <strong>Erreur</strong> compte non existant
                             </div>
-                        <?php 
-
+                        <?php
+                        break;
                     }
                 }
                 ?>
-            <!--conexion-->
-                <form action="verfication_inscription.php" method="POST">
-                    <h1>Inscription</h1>
-                    <label><b>Nom d'utilisateur</b></label> 
-                    <input type="text" placeholder="Entrez un nom d'utilisateur" name="pseudo" required>
-
-                    <label><b>Email :</b></label>
-                    <input type="text" placeholder="Entrez votre email" name="email"required>
-
-                    <label><b>Saisissez votre adresse :</b></label>
-                    <input type="text" placeholder="Entrez une adresse valide" name="adresse" required>
-
-                    <label><b>Saisissez vos coordonnée bancaire :</b></label>
-                    <input type="text" placeholder="Entrez des coordonnées bancaires valide" name="bancaire" required>
+                <form action="verification_connexion2.php" method="POST"> 
+                    <h1>Connexion</h1>
+                    <label><b>Email :</b></label> 
+                    <input type="text" placeholder="Entrez votre email" name="email" required>
 
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
-                    <label><b>Confirmez le mot de passe</b></label>
-                    <input type="password" placeholder="Entrez un mot de passe" name="password_retype" required>
-
-                    <input type="submit" id="submit" value="Inscription">
-
-                    <a href="connexion.php">Vous avez un compte ? Connectez vous en cliquant ICI !</a>
+                    <input type="submit" id="submit" value="Connexion">
                     
-                    
+
+                    <a href="inscription.php">Vous n'avez pas de compte ? Inscrivez vous en cliquant ICI !</a>
+                    <?php
+                    if(isset($_GET['erreur'])){
+                        $err = $_GET['erreur'];
+                        if($err==1 || $err==2) {
+                            echo "<p style = 'color:red'>Utilisateur ou mot de passe incorrect</p>";
+                        }
+                    }
+                    ?>
                 </form>
             
         </div>
