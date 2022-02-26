@@ -53,7 +53,16 @@
         </div>
     </div>
     
-        <center><a href="connexion2.php"><input class="button" type="button" value="Commander"></a></center>
+    <?php 
+        if($data['pseudo']) //affiche déconnexion et la liste des commandes quand l'utilisateur est connecté
+        {?>
+            <center><a href="commande.php"><input class="button" type="button" value="Commander"></a></center><?php
+        }
+        else
+        {?>
+            <center><a href="connexion2.php"><input class="button" type="button" value="Commander"></a></center><?php
+        }
+    ?>
     
     <footer class="footer">
         <img src="/images/Logo.png" alt="Logo Pizzeria">
