@@ -53,7 +53,7 @@
         </div>
     </div>
     
-        <center><a href="commande.php"><input class="button" type="button" value="Commander"></a></center>
+        <center><a href="connexion2.php"><input class="button" type="button" value="Commander"></a></center>
     
     
 
