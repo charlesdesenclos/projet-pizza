@@ -54,7 +54,7 @@
     </div>
     
     <?php 
-        if($data['pseudo']) //affiche déconnexion et la liste des commandes quand l'utilisateur est connecté
+        if($data['pseudo']) //affiche la page commande si on est connecté sinon cela nous permet de nous connecter pour commander
         {?>
             <center><a href="commande.php"><input class="button" type="button" value="Commander"></a></center><?php
         }
