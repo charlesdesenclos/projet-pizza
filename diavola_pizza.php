@@ -36,16 +36,7 @@
         </header>
     </nav>
     
-    <?php 
-        if($data['pseudo']) //affiche la page commande si on est connecté sinon cela nous permet de nous connecter pour commander
-        {?>
-            <center><a href="commande.php"><input class="button" type="button" value="Commander"></a></center><?php
-        }
-        else
-        {?>
-            <center><a href="connexion2.php"><input class="button" type="button" value="Commander"></a></center><?php
-        }
-    ?>
+        <center><img src="images/diavola_pizza.png" alt="diavola_pizza" height="450px"></center>
     
 
     <div class="page">
@@ -62,7 +53,16 @@
         </div>
     </div>
     
-        <center><a href="connexion2.php"><input class="button" type="button" value="Commander"></a></center>
+    <?php 
+        if($data['pseudo']) //affiche la page commande si on est connecté sinon cela nous permet de nous connecter pour commander
+        {?>
+            <center><a href="commande.php"><input class="button" type="button" value="Commander"></a></center><?php
+        }
+        else
+        {?>
+            <center><a href="connexion2.php"><input class="button" type="button" value="Commander"></a></center><?php
+        }
+    ?>
     
     
 
