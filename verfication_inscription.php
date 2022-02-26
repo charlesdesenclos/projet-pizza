@@ -2,13 +2,15 @@
     require_once 'config.php'; // On inclue la connexion à la bdd
 
     // Si les variables existent et qu'elles ne sont pas vides
-    if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_retype']))
+    if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_retype']) && !empty($_POST['adresse']) && !empty($_POST['bancaire']))
     {
         // Patch XSS
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
         $password_retype = htmlspecialchars($_POST['password_retype']);
+        $adresse = htmlspecialchars($_POST['adresse']);
+        $bancaire = htmlspecialchars($_POST['bancaire']);
 
         // On vérifie si l'utilisateur existe
         $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
@@ -33,11 +35,13 @@
                             $ip = $_SERVER['REMOTE_ADDR']; 
 
                             // On insère dans la base de données
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, ip, token) VALUES(:pseudo, :email, :password, :ip, :token)');
+                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password,adresse, bancaire, ip, token) VALUES(:pseudo, :email, :password, :adresse, :bancaire, :ip, :token)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
+                                'adresse' => $adresse,
+                                'bancaire' => $bancaire,
                                 'ip' => $ip,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));

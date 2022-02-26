@@ -100,6 +100,12 @@
                     <label><b>Email :</b></label>
                     <input type="text" placeholder="Entrez votre email" name="email"required>
 
+                    <label><b>Saisissez votre adresse :</b></label>
+                    <input type="text" placeholder="Entrez une adresse valide" name="adresse" required>
+
+                    <label><b>Saisissez vos coordonnée bancaire :</b></label>
+                    <input type="text" placeholder="Entrez des coordonnées bancaires valide" name="bancaire" required>
+
                     <label><b>Mot de passe</b></label>
                     <input type="password" placeholder="Entrez un mot de passe" name="password" required>
 
