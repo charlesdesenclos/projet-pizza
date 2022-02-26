@@ -14,6 +14,9 @@
     <?php
         session_start();
         require_once 'config.php'; // ajout connexion bdd 
+        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+        $req->execute(array($_SESSION['user']));
+        $data = $req->fetch();
     ?>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
@@ -31,6 +34,7 @@
             </nav>
         </header>
     </nav>
+    <?php echo $data['pseudo']; ?>
         <div id="container">
             <!--conexion-->
                 <form action="verification_commande.php" method="POST" >
