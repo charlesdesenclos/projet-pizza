@@ -45,17 +45,28 @@
         </header>
     </nav>
     
-        <div id="container">
+        <div >
             <h1>Vos Commandes</h1>
             <?php
-            $req = $bdd->prepare('SELECT Pizza.pizza AS nompizza, Pizza.pix AS nomprix FROM panier,Pizza WHERE Pizza.id = panier.id_pizza ORDER BY panier.id DESC');
-            $req->execute(array($_SESSION['user']));
-            $liste = $req->fetch();
-            
-            echo $liste['nompizza'];
-            echo $liste['nomprix'];
+            $sql = $bdd->prepare('SELECT Pizza.pizza AS nompizza, Pizza.pix AS nomprix FROM panier,Pizza WHERE Pizza.id = panier.id_pizza ORDER BY panier.id DESC');
+            $sql->execute(array($_SESSION['user']));
+            $Tab = $sql->fetch();
             
             ?>
+            <?php
+            if($sql)
+            {
+                echo"<h1>Voici la liste des commandes :</h1>";
+                while($Tab)
+                {?>
+                    <p>Nom de la pizza</p>
+                    <?php echo $Tab["Pizza.pizza"]; ?>
+
+                    <p>Prix de la pizza</p>
+                    <?php echo $Tab["Pizza.prix"]; ?><?php
+                }
+            }
+           ?>
         </div>
 
 
