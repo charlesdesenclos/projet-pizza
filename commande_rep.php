@@ -52,7 +52,7 @@
                         
                     ?>
                     <a href="index.php"><input type="button" id="button" value="Retour au menu"></a>
-                    <a href="index.php"><input type="submit" id="submit" value="Déconexion"></a>
+                    <a href="liste_commande.php"><input type="button" id="button" value="Liste des commandes"></a>
                 </form>
             
         </div>

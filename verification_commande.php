@@ -6,11 +6,7 @@
     $req->execute(array($_SESSION['user']));
     $data = $req->fetch();
 
-    echo $data['id'];
 
-    
-
-    
     // Si les variables existent et qu'elles ne sont pas vides
     if(isset($_POST['id_pizza']) && isset($data['id']))
     {
@@ -26,7 +22,7 @@
                 'id' => $data
                 ));
                 // On redirige avec le message de succès
-                header('Location:verification_commande.php?reg_err=success');
+                header('Location:commande_rep.php?reg_err=success');
                 die();
                 }else{ header('Location: commande.php?reg_err=id_pizza'); die();}
           

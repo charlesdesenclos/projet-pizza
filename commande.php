@@ -37,7 +37,7 @@
     </nav>
     
         <div id="container">
-            <!--conexion-->
+            <!--commande-->
                 <form action="verification_commande.php" method="POST" >
                     <h1>Commande</h1>
                     
