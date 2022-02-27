@@ -32,8 +32,17 @@
                 <!-- mène à l'accueil -->
                 <a href="pizza.php"><li> Nos Pizzas</li></a>
                 <!-- mène à la page des pizzas-->
-                <a href="commande.php"><li>Commander</li></a>
-                <!-- mène à la page commande-->
+                <?php
+                    if($data['pseudo'])
+                    {?>
+                        <a href="commande.php"><li>Commander</li></a><?php
+                        // mène à la page commande
+                    }
+                    else
+                    {?>
+                        <a href="connexion2.php"><li>Commander</li></a><?php
+                    }
+                ?>
                 <a href="connexion.php"><li>Se Connecter</li></a>
                 <!-- mène à la page de conexion-->
             </nav>
