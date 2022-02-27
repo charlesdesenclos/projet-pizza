@@ -51,11 +51,7 @@
                     </select>
 
                     
-
-                    
-                    
-
-                    <input type="submit" id="submit" value="Commander">
+                    <input type="submit"  id="submit" value="Commander">
 
                     
                     
