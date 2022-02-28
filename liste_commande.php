@@ -72,7 +72,7 @@
                 </tr>
                 <?php
                 
-                    echo"<h1>Voici la liste des commandes :</h1>";
+                    echo"<h2>Voici la liste des commandes :</h2>";
                     while($tab = $RequetStatement->fetch()){
                     
                         echo"<tr><td>{$tab['nompizza']}</td><td>{$tab['nomprix']}</td><td>{$tab['nom']}</td></tr>\n";
