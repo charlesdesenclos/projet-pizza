@@ -59,8 +59,7 @@
             <h2 class="espace"><mark>Informations consommateurs : Tous nos produits sont bio ainsi que produits en France.</mark></h2>
 
             
-        </div>
-    </div>
+       
     
     <?php 
         if($data['pseudo']) //affiche la page commande si on est connecté sinon cela nous permet de nous connecter pour commander
@@ -72,6 +71,8 @@
             <center><a href="connexion2.php"><input class="button" type="button" value="Commander"></a></center><?php
         }
     ?>
+        </div>
+    </div>
     
     
 

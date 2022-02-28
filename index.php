@@ -48,6 +48,7 @@
             <img src="../images/Chef.png"/></a>
             <a href="../pizza.php"><img src="../images/PassezCommande.png"/></a>
         </div>
+            </div>
 
         <footer class="footer">
             <img src="/images/Logo.png" alt="Logo Pizzeria">

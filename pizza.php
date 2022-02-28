@@ -55,6 +55,7 @@
             <a href="../diavola_pizza.php"><img src="../images/diavola_pizza.png"/></a>
             <a href="../bacon_pizza.php"><img src="../images/bacon_pizza.png"/></a>
         </div>
+                </div>
 
 
     <footer class="footer">
