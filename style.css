@@ -278,7 +278,7 @@ footer.footer {
 footer.footer img {
     width: 150px;
 }
-#liste_commande{
+.liste_commande{
     width: 110%;
     padding: 30px;
     border: 1px solid #f1f1f1;
