@@ -41,6 +41,15 @@
                 ?>
                 <a href="connexion.php"><li>Se Connecter</li></a>
                 <!-- mène à la page de conexion-->
+                <li>Vous êtes connecter en tant que : <?php echo $data['pseudo']; ?></li>
+                <!-- affiche l'utilisateur si il est connecter-->
+                <?php 
+                    if($data['pseudo']) //affiche déconnexion et la liste des commandes quand l'utilisateur est connecté
+                     {?>
+                        <li><a href="deconnexion.php">Déconexion</a></li>
+                        <li><a href="liste_commande.php">Liste des commandes</a></li><?php
+                    }
+                ?>
             </nav>
         </header>
     </nav>
@@ -65,21 +74,5 @@
                 </form>
             
         </div>
-
-
-    <footer class="footer">
-        <img src="/images/Logo.png" alt="Logo Pizzeria">
-        <nav class="nav">
-            <li>Vous êtes connecter en tant que : <?php echo $data['pseudo']; ?></li>
-            <!-- affiche l'utilisateur si il est connecter-->
-            <?php 
-                if($data['pseudo']) //affiche déconnexion et la liste des commandes quand l'utilisateur est connecté
-                    {?>
-                    <li><a href="deconnexion.php">Déconexion</a></li>
-                    <li><a href="liste_commande.php">Liste des commandes</a></li><?php
-                }
-            ?>  
-        </nav>
-    </footer>
 </body>
 </html>
