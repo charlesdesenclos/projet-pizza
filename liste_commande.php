@@ -18,6 +18,7 @@
         $req->execute(array($_SESSION['user']));
         $data = $req->fetch();
         
+        
     ?>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
@@ -53,29 +54,34 @@
             </nav>
         </header>
     </nav>
-    
-        <div >
+    <div class="container">
+        <div class="liste_commande">
             <h1>Vos Commandes</h1>
             <?php
-            $sql = $bdd->prepare('SELECT Pizza.pizza AS nompizza, Pizza.pix AS nomprix FROM panier,Pizza WHERE Pizza.id = panier.id_pizza ORDER BY panier.id DESC');
-            $sql->execute(array($_SESSION['user']));
-            $Tab = $sql->fetch();
+            
+            $sql = 'SELECT Pizza.pizza AS nompizza, Pizza.prix AS nomprix, utilisateurs.pseudo AS nom, utilisateurs.id AS id_utilisateurs, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
+            $RequetStatement = $bdd->query($sql);
+            
             
             ?>
-            <?php
-            if($sql)
-            {
-                echo"<h1>Voici la liste des commandes :</h1>";
-                while($Tab)
-                {?>
-                    <p>Nom de la pizza</p>
-                    <?php echo $Tab["Pizza.pizza"]; ?>
+            <table width="100%" border="1" cellpadding="5">
+                <tr>
+                    <th>Nom de la pizza</th>
+                    <th>Prix de la pizza</th>
+                    <th>Nom</th>
+                </tr>
+                <?php
+                
+                    echo"<h1>Voici la liste des commandes :</h1>";
+                    while($tab = $RequetStatement->fetch()){
+                    
+                        echo"<tr><td>{$tab['nompizza']}</td><td>{$tab['nomprix']}</td><td>{$tab['nom']}</td></tr>\n";
 
-                    <p>Prix de la pizza</p>
-                    <?php echo $Tab["Pizza.prix"]; ?><?php
-                }
-            }
-           ?>
+                    }?>
+            </table>
+                
+            
         </div>
+    </div>
 </body>
 </html>
