@@ -49,7 +49,7 @@
                         <li><a href="deconnexion.php">Déconexion</a></li>
                         <li><a href="liste_commande.php">Liste des commandes</a></li><?php
                     }
-                ?>  
+                ?>
             </nav>
         </header>
     </nav>
