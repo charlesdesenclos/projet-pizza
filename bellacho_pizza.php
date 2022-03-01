@@ -46,7 +46,7 @@
                 <?php 
                     if($data['pseudo']) //affiche déconnexion et la liste des commandes quand l'utilisateur est connecté
                      {?>
-                        <li><a href="deconnexion.php">Déconexion</a></li>
+                        <li><a href="deconnexion.php">Déconnexion</a></li>
                         <li><a href="liste_commande.php">Liste des commandes</a></li><?php
                     }
                 ?>
