@@ -59,7 +59,7 @@
             <h1>Vos Commandes</h1>
             <?php
             
-            $sql = 'SELECT Pizza.pizza AS nompizza, Pizza.prix AS nomprix, utilisateurs.pseudo AS nom, utilisateurs.id AS id_utilisateurs, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
+            $sql = 'SELECT Pizza.pizza AS nompizza, Pizza.prix AS nomprix, utilisateurs.pseudo AS nom, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
             $RequetStatement = $bdd->query($sql);
             
             
@@ -74,8 +74,10 @@
                 
                     echo"<h2>Voici la liste des commandes :</h2>";
                     while($tab = $RequetStatement->fetch()){
-                    
-                        echo"<tr><td>{$tab['nompizza']}</td><td>{$tab['nomprix']}</td><td>{$tab['nom']}</td></tr>\n";
+                        if($tab['id'] == $data['id'])
+                        {
+                            echo"<tr><td>{$tab['nompizza']}</td><td>{$tab['nomprix']}</td><td>{$tab['nom']}</td></tr>\n";
+                        }                        
 
                     }?>
             </table>
