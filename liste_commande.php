@@ -72,11 +72,11 @@
                 </tr>
                 <?php
                 
-                    echo"<h2>Voici la liste des commandes :</h2>";
+                    echo"<h2 clas='espace2'>Voici la liste des commandes :</h2>";
                     while($tab = $RequetStatement->fetch()){
                         if($tab['id'] == $data['id'])
                         {
-                            echo"<tr><td>{$tab['nompizza']}</td><td>{$tab['nomprix']}</td><td>{$tab['nom']}</td></tr>\n";
+                            echo"<tr><td>{$tab['nompizza']}</td><td>{$tab['nomprix']} € </td><td>{$tab['nom']}</td></tr>\n";
                         }                        
 
                     }?>
