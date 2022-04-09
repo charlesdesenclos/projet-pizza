@@ -14,6 +14,11 @@ class User
         $this -> password = $NewPassword;
     }
 
+    public function getPseudo()
+    {
+        return $tis-> pseudo_;
+    }
+
     public function getEmail()
     {
         return $this-> email_;
