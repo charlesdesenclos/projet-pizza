@@ -16,7 +16,7 @@ class User
 
     public function getPseudo()
     {
-        return $tis-> pseudo_;
+        return $this-> pseudo_;
     }
 
     public function getEmail()
