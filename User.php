@@ -24,6 +24,11 @@ class User
         return $this-> email_;
     }
 
+    public function seconnecter($mdp)
+    {
+        
+    }
+
 
 }
 ?>
