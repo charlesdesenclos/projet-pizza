@@ -78,7 +78,7 @@ class User
         }else{ header('Location: inscription.php?reg_err=already'); die();}
     }
 
-    public function connection($mdp)
+    public function connection($email, $password)
     {
         require_once 'config.php';
         $email = htmlspecialchars($_POST['email']); 
