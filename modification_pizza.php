@@ -66,16 +66,24 @@
                 if($tab['id'] == $data['id'])
                 {
                     ?>
-
+                     <select>
+                         <option value="">Choisisez la pizza</option>
+                         <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
+                        
+                    </select>
+                    <input type="submit" name="submit" value="Modifier la commande">
                     
                     <?php
+
+                    if(isset($Post["submit"]))
+                    {
+
+                    }
                 }                        
 
             }?>
-            ?>
-            <select>
-                <option value=""></option>
-            </select>
+        
+           
             
                 
             
