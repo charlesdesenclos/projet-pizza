@@ -62,27 +62,40 @@
             $sql = 'SELECT Pizza.pizza AS nompizza, Pizza.prix AS nomprix, utilisateurs.pseudo AS nom, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
             $RequetStatement = $bdd->query($sql);
             
-            while($tab = $RequetStatement->fetch()){
-                if($tab['id'] == $data['id'])
-                {
-                    ?>
-                     <select>
-                         <option value="">Choisisez la pizza</option>
-                         <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
-                        
-                    </select>
-                    <input type="submit" name="submit" value="Modifier la commande">
+            $tab = $RequetStatement->fetch();
+            
+            if($tab['id'] == $data['id'])
+            {
+                ?>
+                 <select>
+                    <option value="">Choisisez la pizza</option>
+                     <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
                     
-                    <?php
+                </select>
+               <?php
+            }
+            ?>
+            
+                <input type="submit" name="submit" value="Modifier la commande">
+                    
+                <?php
 
-                    if(isset($Post["submit"]))
-                    {
+                if(isset($_Post['submit']))
+                {?>
+                 <label><b>Pizza :</b></label> 
+                <select name="id_pizza" id="select-pizza">
+                    <option value="">Choisisez votre pizza</option>
+                    <option value="1">Bacon Pizza  10€</option>
+                    <option value="2">Bellacho Pizza 10€</option>
+                    <option value="3">Chorriza Pizza 10€</option>
+                    <option value="4">Diavola Pizza 10€</option>
+                </select>
 
-                    }
-                }                        
-
-            }?>
-        
+                 <input type="submit" name="submit2" value="Valider la modification">
+                 
+                <?php                      
+                }
+        ?>
            
             
                 
