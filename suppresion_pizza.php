@@ -64,27 +64,28 @@
             $n=1;
             ?>
             <form action="" method="POST" >
-                  
-                                  
-                    
-            </form>
-            <?php
-            while($tab = $RequetStatement->fetch()){    
-                if($tab['id'] == $data['id'])
-                {
-                    echo "Commande numéro ";echo $n;echo ":";
-                    ?>
-                    <select name=pizza>
-                        
-                        <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
-                        
-                    </select>
-                    <input type="submit" name="submit" value="Supprimer la commande numéro  <?php echo $n;?>">
                 <?php
-                $n = $n +1;
-                }
+                while($tab = $RequetStatement->fetch()){    
+                    if($tab['id'] == $data['id'])
+                    {
+                        echo "Commande numéro ";echo $n;echo ":";
+                        ?>
+                        <select name=pizza>
+                            
+                            <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
+                            
+                        </select>
+                        <input type="submit" name="submit" value="Supprimer la commande numéro  <?php echo $n;?>">
+                    <?php
+                    $n = $n +1;
+                    }
                 
             }
+                                  
+            ?>    
+            </form>
+            <?php
+            
 
             if(isset($_Post['submit']))
             {
