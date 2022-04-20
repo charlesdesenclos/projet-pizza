@@ -62,13 +62,19 @@
             $sql = 'SELECT Pizza.pizza AS nompizza, Pizza.prix AS nomprix, utilisateurs.pseudo AS nom, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
             $RequetStatement = $bdd->query($sql);
             $n=1;
-
+            ?>
+            <form action="" method="POST" >
+                  
+                                  
+                    
+            </form>
+            <?php
             while($tab = $RequetStatement->fetch()){    
                 if($tab['id'] == $data['id'])
                 {
                     echo "Commande numéro ";echo $n;echo ":";
                     ?>
-                    <select>
+                    <select name=pizza>
                         
                         <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
                         
@@ -82,7 +88,8 @@
 
             if(isset($_Post['submit']))
             {
-
+                $nompizza = $_POST['pizza'];
+                $req= "DELETE FROM panier";
             }
             
             ?>
