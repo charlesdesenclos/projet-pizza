@@ -142,6 +142,10 @@
                     
                     
                 </form>
+                <?php
+                $data_user = new User();
+
+                ?>
             
         </div>
 </body>
