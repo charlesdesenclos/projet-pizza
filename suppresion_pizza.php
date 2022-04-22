@@ -55,12 +55,13 @@
         </header>
     </nav>
     <div class="container">
-        <div class="liste_commande">
+        
             <h1>Supprimer une commande</h1>
             <?php
             
-            $sql = 'SELECT Pizza.pizza AS nompizza, Pizza.prix AS nomprix, utilisateurs.pseudo AS nom, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
+            $sql = 'SELECT Pizza.pizza AS nompizza, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
             $RequetStatement = $bdd->query($sql);
+            $RequetStatement = array();
             $n=1;
             ?>
             <form action="" method="POST" >
@@ -71,9 +72,9 @@
                         echo "Commande numéro ";echo $n;echo ":";
                         ?>
                         <select name=pizza>
-                            
-                            <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
-                            
+                            <?php
+                            echo '<option value="'.$tab["id"].'">'.$tab["nompizza"].'</option>';
+                            ?>
                         </select>
                         <input type="submit" name="submit" value="Supprimer la commande numéro  <?php echo $n;?>">
                     <?php
@@ -81,8 +82,8 @@
                     }
                 
             }
-                                  
-            ?>    
+            ?>
+            
             </form>
             <?php
             
@@ -98,7 +99,7 @@
             
                 
             
-        </div>
+        
     </div>
 </body>
 </html>
