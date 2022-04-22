@@ -22,6 +22,9 @@
         $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
         $req->execute(array($_SESSION['user']));
         $data = $req->fetch();
+
+
+        
     ?>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
