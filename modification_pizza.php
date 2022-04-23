@@ -73,6 +73,15 @@
                         <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
                         
                     </select>
+                    <label><b>Choisissez une nouvelle Pizza :</b></label> 
+                <select name="id_pizza" id="select-pizza">
+                    <option value="">Choisisez votre pizza</option>
+                    <option value="1">Bacon Pizza  10€</option>
+                    <option value="2">Bellacho Pizza 10€</option>
+                    <option value="3">Chorriza Pizza 10€</option>
+                    <option value="4">Diavola Pizza 10€</option>
+                </select>
+
                     <input type="submit" name="submit" value="Modifier la commande numéro  <?php echo $n;?>">
                 <?php
                 $n = $n +1;
@@ -85,21 +94,26 @@
                     
                 <?php
 
-                if(isset($_Post['submit']))
-                {?>
-                 <label><b>Pizza :</b></label> 
-                <select name="id_pizza" id="select-pizza">
-                    <option value="">Choisisez votre pizza</option>
-                    <option value="1">Bacon Pizza  10€</option>
-                    <option value="2">Bellacho Pizza 10€</option>
-                    <option value="3">Chorriza Pizza 10€</option>
-                    <option value="4">Diavola Pizza 10€</option>
-                </select>
+            if(isset($_POST['id_pizza']) && isset($data['id']))
+            {
+                $id_pizza = htmlspecialchars($_POST['id_pizza']);
+                $data = htmlspecialchars($data['id']);
 
-                 <input type="submit" name="submit2" value="Valider la modification">
-                 
-                <?php                      
-                }
+    
+    
+                if(strlen($id_pizza) <= 11)
+                { // On verifie que la longueur de id_pizza <= 11
+                    $insert = $bdd->prepare('UPDATE)');
+                    $insert->execute(array(
+                    'id_pizza' => $id_pizza,
+                    'id' => $data
+                ));
+                // On redirige avec le message de succès
+                header('Location:commande_rep.php?reg_err=success');
+                die();
+                }else{ header('Location: commande.php?reg_err=id_pizza'); die();}
+      
+            }
         ?>
            
             
