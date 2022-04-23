@@ -9,7 +9,7 @@
         $reponse = $bdd ->query($req2);
         while ($donnees = $reponse->fetch())
         {
-            array_push($tableauUser,new User($donnees['pseudo'],$donnees['email'],$donnees['password'],$donnees['password_retype'],$donnees['adresse'],$donnees['bancaire']));
+            array_push($tableauUser,new User($donnees['pseudo'],$donnees['email'],$donnees['password']));
         }
     }
     catch(PDOException $e)
