@@ -61,7 +61,7 @@
             
             $sql = 'SELECT Pizza.pizza AS nompizza, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
             $RequetStatement = $bdd->query($sql);
-            $RequetStatement = array();
+           
             $n=1;
             ?>
             <form action="" method="POST" >
