@@ -1,4 +1,5 @@
 <?php
+
 class Pizzas{
     private $id_;
     private $pizza_;
@@ -22,6 +23,11 @@ class Pizzas{
     }
     public function affiche()
     {
+        session_start();
+        require_once 'config.php'; // ajout connexion bdd 
+        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+        $req->execute(array($_SESSION['user']));
+        $data = $req->fetch();
         echo"<h2 clas='espace2'>Voici la liste des commandes :</h2>";
         while($tab = $RequetStatement->fetch())
         {
