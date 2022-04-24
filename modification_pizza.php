@@ -103,7 +103,7 @@
     
                 if(strlen($id_pizza) <= 11)
                 { // On verifie que la longueur de id_pizza <= 11
-                    $insert = $bdd->prepare('UPDATE)');
+                    $insert = $bdd->prepare('UPDATE id_pizza WHERE ');
                     $insert->execute(array(
                     'id_pizza' => $id_pizza,
                     'id' => $data
