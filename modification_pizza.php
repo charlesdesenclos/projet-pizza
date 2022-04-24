@@ -105,10 +105,10 @@
     
                 if(strlen($id_pizza) <= 11)
                 { // On verifie que la longueur de id_pizza <= 11
-                    $insert = $bdd->prepare('UPDATE id_pizza WHERE ');
+                    $insert = $bdd->prepare('UPDATE id_pizza SET id_pizza ');
                     $insert->execute(array(
                     'id_pizza' => $id_pizza,
-                    'id' => $data
+                    
                 ));
                 // On redirige avec le message de succès
                 header('Location:commande_rep.php?reg_err=success');
