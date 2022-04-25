@@ -227,7 +227,7 @@ nav.nav {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 1000px;
+    width: 1200px;
     margin-left: 30px;
 }
 
@@ -278,7 +278,8 @@ footer.footer {
 footer.footer img {
     width: 150px;
 }
-.liste_commande{
+
+.liste_commande {
     width: 110%;
     padding: 30px;
     border: 1px solid #f1f1f1;
