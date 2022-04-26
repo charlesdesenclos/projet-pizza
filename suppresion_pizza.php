@@ -58,7 +58,7 @@
     </nav>
     <div class="container">
         
-            <h1>Supprimer une commande</h1>
+            
             <?php
             
             $sql = 'SELECT Pizza.pizza AS nompizza, panier.id_utilisateurs AS id, panier.id AS id_pizza FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
@@ -67,6 +67,7 @@
             $n=1;
             ?>
             <form action="" method="POST" >
+            <h1>Supprimer une commande</h1>
                 <?php
                 while($tab = $RequetStatement->fetch()){    
                     if($tab['id'] == $data['id'])
