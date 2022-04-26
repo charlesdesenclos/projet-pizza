@@ -66,7 +66,7 @@
            
             $n=1;
             ?>
-            <form action="" method="POST" >
+            <form class="form" action="" method="POST" >
             <h1>Supprimer une commande</h1>
                 <?php
                 while($tab = $RequetStatement->fetch()){    
