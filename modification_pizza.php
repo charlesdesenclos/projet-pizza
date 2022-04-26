@@ -106,12 +106,12 @@
     
                 if(strlen($id_pizza) <= 11)
                 { // On verifie que la longueur de id_pizza <= 11
-                    $insert = $bdd->prepare('UPDATE `panier` SET `id_pizza`= id_pizza  WHERE id_utilisateurs AND id_pizza');
+                    $insert = $bdd->prepare('UPDATE `panier` SET `id_pizza`= :id_pizza  WHERE id_utilisateurs ');
                     $insert->execute(array(
                     'id_pizza' => $id_pizza2,
-                    'id_pizza' => $id_pizza,
+                    
                     'id_utilisateurs' => $data,
-                    'id_pizza' =>$id_pizza2
+                    
 
                     
                 ));
