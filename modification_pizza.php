@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-    <title>Commande</title>
+    <title>Modifier votre commande</title>
     <link rel="icon" type="image/png" sizes="16x16" href="images/icone_pizza.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
@@ -111,9 +111,9 @@
                     
                 ));
                 // On redirige avec le message de succès
-                header('Location:commande_rep.php?reg_err=success');
+                header('Location:index.php.php?reg_err=success');
                 die();
-                }else{ header('Location: commande.php?reg_err=id_pizza'); die();}
+                }else{ header('Location: modification_pizza.php?reg_err=id_pizza'); die();}
       
             }
         ?>
