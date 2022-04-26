@@ -116,7 +116,7 @@
                     
                 ));
                 // On redirige avec le message de succès
-                header('Location:index.php.php?reg_err=success');
+                header('Location:modification_pizza_re.php.php?reg_err=success');
                 die();
                 }else{ header('Location: modification_pizza.php?reg_err=id_pizza'); die();}
       
