@@ -61,7 +61,7 @@
             <h1>Supprimer une commande</h1>
             <?php
             
-            $sql = 'SELECT Pizza.pizza AS nompizza, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
+            $sql = 'SELECT Pizza.pizza AS nompizza, panier.id_utilisateurs AS id, panier.id AS id_pizza FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
             $RequetStatement = $bdd->query($sql);
            
             $n=1;
@@ -73,7 +73,7 @@
                     {
                         echo "Commande numéro ";echo $n;echo ":";
                         ?>
-                        <select name=pizza>
+                        <select name=id_pizza>
                             <?php
                             echo '<option value="'.$tab["id"].'">'.$tab["nompizza"].'</option>';
                             ?>
@@ -85,7 +85,7 @@
                 
             }
 
-            if(isset($_POST['']))
+            
             ?>
             
             </form>
@@ -93,6 +93,7 @@
             
 
     
+
 
 
     // Si les variables existent et qu'elles ne sont pas vides
@@ -104,9 +105,10 @@
         
         
         if(strlen($id_pizza) <= 11){ // On verifie que la longueur de id_pizza <= 11
-             $insert = $bdd->prepare('DELETE FROM panier WHERE id_pizza ');
+             $insert = $bdd->prepare('DELETE FROM `panier` WHERE id_utilisateurs AND id ');
             $insert->execute(array(
-                'id_pizza' => $id_pizza,
+                'id_utilisateurs' => $data,
+                'id_' => $id_pizza,
                 
                 ));
                 // On redirige avec le message de succès
