@@ -2,7 +2,7 @@
 <html lang="fr">
 <?
 include ("function.php");
-headindex();
+headindex()
 ?>
 <body>
     <?php
