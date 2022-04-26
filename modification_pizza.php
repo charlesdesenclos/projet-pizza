@@ -57,14 +57,16 @@
         </header>
     </nav>
     <div class="container">
-        <div class="liste_commande">
+        
             <h1>Modifier une commande</h1>
             <?php
             
             $sql = 'SELECT Pizza.pizza AS nompizza, Pizza.prix AS nomprix, utilisateurs.pseudo AS nom, panier.id_utilisateurs AS id FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
             $RequetStatement = $bdd->query($sql);
             $n = 1;
-            
+            ?>
+            <form action="" method="POST">
+                <?
             while($tab = $RequetStatement->fetch()){    
                 if($tab['id'] == $data['id'])
                 {
@@ -91,12 +93,13 @@
                 
             }
             ?>
+            </form>
             
                 
                     
                 <?php
 
-            if(isset($_POST['id_pizza']) && isset($data['id']) && isset($_POST['id_pizza2']))
+            if(isset($data['id']) && isset($_POST['id_pizza2']))
             {
                 $id_pizza = htmlspecialchars($_POST['id_pizza']);
                 $data = htmlspecialchars($data['id']);
