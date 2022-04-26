@@ -65,7 +65,7 @@
             $RequetStatement = $bdd->query($sql);
             $n = 1;
             ?>
-            <form action="" method="POST">
+            <form class="form" action="" method="POST">
             <h1>Modifier une commande</h1>
                 <?
             while($tab = $RequetStatement->fetch()){    
