@@ -14,11 +14,10 @@
     <?php
         session_start();
         require_once 'config.php'; // ajout connexion bdd 
+
         $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
         $req->execute(array($_SESSION['user']));
         $data = $req->fetch();
-        
-        
     ?>
     <nav>
         <!-- nav permet de mettre un ensemble de lien de navigation-->
@@ -56,72 +55,16 @@
             </nav>
         </header>
     </nav>
-    <div class="container">
-        
-            <h1>Supprimer une commande</h1>
-            <?php
+        <div id="container">
+            <!--commande résultat-->
+                <form action="deconnexion.php" method="POST">
+                    <h1>Commande</h1>
+                    <label><b>Votre commande a bien été supprimer</b></label> 
+                    
+                    <a href="index.php"><input type="button" id="button" value="Retour au menu"></a>
+                    <a href="liste_commande.php"><input type="button" id="button" value="Liste des commandes"></a>
+                </form>
             
-            $sql = 'SELECT Pizza.pizza AS nompizza, panier.id_utilisateurs AS id, panier.id AS id_pizza FROM panier,Pizza,utilisateurs WHERE Pizza.id = panier.id_pizza AND utilisateurs.id = panier.id_utilisateurs ORDER BY panier.id DESC';
-            $RequetStatement = $bdd->query($sql);
-           
-            $n=1;
-            ?>
-            <form action="" method="POST" >
-                <?php
-                while($tab = $RequetStatement->fetch()){    
-                    if($tab['id'] == $data['id'])
-                    {
-                        echo "Commande numéro ";echo $n;echo ":";
-                        ?>
-                        <select name=id_pizza>
-                            <?php
-                            echo '<option value="'.$tab["id"].'">'.$tab["nompizza"].'</option>';
-                            ?>
-                        </select>
-                        <input type="submit" name="submit" value="Supprimer la commande numéro  <?php echo $n;?>">
-                    <?php
-                    $n = $n +1;
-                    }
-                
-            }
-
-            
-            ?>
-            
-            </form>
-            <?php
-            
-
-    
-
-
-
-    // Si les variables existent et qu'elles ne sont pas vides
-    if(isset($_POST['id_pizza']) && isset($data['id']))
-    {
-        $id_pizza = htmlspecialchars($_POST['id_pizza']);
-        $data = htmlspecialchars($data['id']);
-
-        
-        
-        if(strlen($id_pizza) <= 11){ // On verifie que la longueur de id_pizza <= 11
-                $insert = $bdd->prepare('DELETE FROM `panier` WHERE id_utilisateurs AND id ');
-                $insert->execute(array(
-                'id_utilisateurs' => $data,
-                'id' => $id_pizza
-                
-                ));
-                // On redirige avec le message de succès
-                header('Location:suppresion_pizza-re.php?reg_err=success');
-                die();
-                }else{ header('Location: suppresion_pizza.php?reg_err=id_pizza'); die();}
-          
-    }
-            
-            
-      ?>          
-            
-        
-    </div>
+        </div>
 </body>
 </html>

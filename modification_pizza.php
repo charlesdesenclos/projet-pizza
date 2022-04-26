@@ -70,7 +70,7 @@
                 {
                     echo "Commande numéro ";echo $n;echo ":";
                     ?>
-                    <select>
+                    <select name=id_pizza2>
                         
                         <option value="<?php $tab["id"];?>"><?php echo $tab["nompizza"];?></option>
                         
@@ -96,18 +96,23 @@
                     
                 <?php
 
-            if(isset($_POST['id_pizza']) && isset($data['id']))
+            if(isset($_POST['id_pizza']) && isset($data['id']) && isset($_POST['id_pizza2']))
             {
                 $id_pizza = htmlspecialchars($_POST['id_pizza']);
                 $data = htmlspecialchars($data['id']);
+                $id_pizza2= htmlspecialchars($_POST['id_pizza2']);
 
     
     
                 if(strlen($id_pizza) <= 11)
                 { // On verifie que la longueur de id_pizza <= 11
-                    $insert = $bdd->prepare('UPDATE id_pizza SET id_pizza ');
+                    $insert = $bdd->prepare('UPDATE `panier` SET `id_pizza`= id_pizza  WHERE id_utilisateurs AND id_pizza');
                     $insert->execute(array(
+                    'id_pizza' => $id_pizza2,
                     'id_pizza' => $id_pizza,
+                    'id_utilisateurs' => $data,
+                    'id_pizza' =>$id_pizza2
+
                     
                 ));
                 // On redirige avec le message de succès
