@@ -110,17 +110,11 @@
     
                 if(strlen($id_pizza) <= 11)
                 { // On verifie que la longueur de id_pizza <= 11
-                    $insert = $bdd->prepare('UPDATE `panier` SET `id_pizza`= :id_pizza  WHERE id_utilisateurs ');
-                    $insert->execute(array(
-                    'id_pizza' => $id_pizza2,
-                    
-                    'id_utilisateurs' => $data,
-                    
-
-                    
-                ));
+                    $insert = "UPDATE `panier` SET `id_pizza`= '".$id_pizza. "' WHERE id_utilisateurs ";
+                    $requetstatement = $bdd->query($insert);
+                   
                 // On redirige avec le message de succès
-                header('Location:modification_pizza_re.php.php?reg_err=success');
+                header('Location:modification_pizza_re.php?reg_err=success');
                 die();
                 }else{ header('Location: modification_pizza.php?reg_err=id_pizza'); die();}
       
