@@ -2,19 +2,33 @@
 
 class User
 {
+    private $id_;
     private $pseudo_;
     private $email_;
     private $password_;
+    private $password_retype_;
     private $adresse_;
     private $bancaire_;
 
-    public function __construct($NewPseudo, $NewEmail, $NewPassword)
+    private $pdo_;
+
+
+    public function __construct($Newid, $NewPseudo, $NewEmail, $NewPassword, $NewPassword_retype, $Newadresse, $Newbancaire, $Newpdo)
     {
+        $this -> id_ = $Newid;
         $this -> pseudo_ = $NewPseudo;
         $this-> email_ = $NewEmail;
-        $this -> password = $NewPassword;
+        $this -> password_ = $NewPassword;
+        $this -> password_retype_ = $NewPassword_retype;
+        $this-> adresse_ = $Newadresse;
+        $this -> bancaire_ = $Newbancaire;
+        $this -> pdo_ = $Newpdo;
     }
 
+    public function getId()
+    {
+        return $this-> id_;
+    }
     public function getPseudo()
     {
         return $this-> pseudo_;
@@ -23,6 +37,21 @@ class User
     public function getEmail()
     {
         return $this-> email_;
+    }
+
+    public function getPassword()
+    {
+        return $this -> password_;
+    }
+
+    public function getAdresse()
+    {
+        return $this -> adresse_;
+
+    }
+    public function getBancaire()
+    {
+        return $this -> bancaire_;
     }
     public function inscription($pseudo,$email,$password,$password_retype,$adresse,$bancaire)
     {
@@ -54,19 +83,17 @@ class User
                             $cost = ['cost' => 12];
                             $password = password_hash($password, PASSWORD_BCRYPT, $cost);
                             
-                            // On stock l'adresse IP
-                            $ip = $_SERVER['REMOTE_ADDR']; 
+                        
 
                             // On insère dans la base de données
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password,adresse, bancaire, ip, token) VALUES(:pseudo, :email, :password, :adresse, :bancaire, :ip, :token)');
+                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password,adresse, bancaire, ip, token) VALUES(:pseudo, :email, :password, :adresse, :bancaire)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
                                 'adresse' => $adresse,
                                 'bancaire' => $bancaire,
-                                'ip' => $ip,
-                                'token' => bin2hex(openssl_random_pseudo_bytes(64))
+                                
                             ));
                             // On redirige avec le message de succès
                             header('Location:connexion.php?reg_err=success');
@@ -87,7 +114,7 @@ class User
         $email = strtolower($email); // email transformé en minuscule
         
         // On regarde si l'utilisateur est inscrit dans la table utilisateurs
-        $check = $bdd->prepare('SELECT pseudo, email, password, token FROM utilisateurs WHERE email = ?');
+        $check = $bdd->prepare('SELECT id, pseudo, email, password FROM utilisateurs WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -104,7 +131,7 @@ class User
                 if(password_verify($password, $data['password']))
                 {
                         // On créer la session et on redirige sur commande.php
-                    $_SESSION['user'] = $data['token'];
+                    $_SESSION['user'] = $data['id'];
                     header('Location: commande.php');
                     die();
                     }else{ header('Location: connexion2.php?login_err=password'); die(); }
@@ -113,11 +140,19 @@ class User
         
 
     }
-    public function affiche()
-    {
-        
-    }
 
+    public function getAllUser()
+    {
+        $sql = "SELECT * FROM utilisateurs";
+        $reponses = $this -> pdo_ -> query($sql);
+        $TableauUser = array();
+        while($donnees = $reponses->fetch())
+        {
+            $User = new User ($donnees['id'], $donnees )
+        }
+
+    }
+    
 
 }
 ?>

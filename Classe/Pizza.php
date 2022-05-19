@@ -39,6 +39,21 @@ class Pizza{
         $reponses = $this ->Newpdo -> query($sql);
         $donnees = $reponses->Newpdo;
     }
+
+    public function getAllPizza()
+    {
+        $sql = "SELECT * FROM Pizza";
+        $reponses = $this -> pdo_ -> query($sql);
+        $TableauPizza = array();
+        while ($donnees  = $reponses->fetch())
+        {
+            $Pizza = new Pizza ($donnees['id'], $donnees['pizza'], $donnees['prix'], $this -> pdo_);
+
+            array_push($TableauPizza,$Pizza);
+        }
+
+        return $TableauPizza;
+    }
 }
 
 
